@@ -1,156 +1,205 @@
-🚀 Automated LinkedIn Post Generator using GenAI + n8n
+# 🚀 Automated LinkedIn Post Generator using GenAI + n8n
 
-This project is an AI-powered automation system that turns any article link into a professional LinkedIn post — completely automatically.
+This project is an AI-powered automation system that converts article links into professional LinkedIn posts automatically.
 
-By combining n8n, OpenAI models, Google Sheets, and the LinkedIn API, this workflow reads an article URL, summarizes it, rewrites it for LinkedIn, and publishes it — all without human intervention.
+By combining **n8n**, **OpenAI models**, **Google Sheets**, and the **LinkedIn API**, the workflow reads an article URL, summarizes it, rewrites it for LinkedIn, and publishes it — completely hands-free.
 
-This project was built for the GenAI Buildathon to showcase a real-world, fully functional generative AI automation pipeline.
+Built for the **GenAI Buildathon**, this project demonstrates a real-world generative AI automation pipeline.
 
-⭐ Project Overview
+---
 
-Professionals want to be consistent on LinkedIn, but:
+## ⭐ Project Overview
 
-Writing summaries is slow
+Professionals want to stay consistent on LinkedIn, but:
 
-Writing LinkedIn-style posts is harder
+- Writing summaries takes time
+- Converting articles into LinkedIn posts is difficult
+- Posting regularly requires effort
 
-Posting regularly is difficult
+This system automates the entire workflow.
 
-This system solves all of these by automating the entire workflow:
+---
 
-🧠 How the System Works
-✔ Step 1 — Add an Article Link (Google Sheets Trigger)
+## 🧠 How the System Works
 
-Whenever a new link is added to Google Sheets, n8n automatically starts the workflow.
+### Step 1 — Google Sheets Trigger
+A new article link is added to Google Sheets.
 
-✔ Step 2 — AI Summarizes the Article
+This automatically triggers the n8n workflow.
 
-Using OpenAI GPT models, the system generates a clean summary of the article.
+---
 
-Prompt Used:
+### Step 2 — AI Article Summarization
+An OpenAI model generates a concise summary of the article.
 
-Summarize this article: {{$json.ArticleLinks}}
+Example prompt:
 
-✔ Step 3 — AI Converts Summary into LinkedIn Post
+# 🚀 Automated LinkedIn Post Generator using GenAI + n8n
 
-A LinkedIn-style post is generated using a second LLM in the chain.
+This project is an AI-powered automation system that converts article links into professional LinkedIn posts automatically.
 
-Prompt Example:
+By combining **n8n**, **OpenAI models**, **Google Sheets**, and the **LinkedIn API**, the workflow reads an article URL, summarizes it, rewrites it for LinkedIn, and publishes it — completely hands-free.
 
-Rewrite this summary into a professional LinkedIn post.
-Add 4–5 relevant hashtags and a call to action.
+Built for the **GenAI Buildathon**, this project demonstrates a real-world generative AI automation pipeline.
 
-✔ Step 4 — LinkedIn API Publishes Automatically
+---
 
-The final output is sent to LinkedIn and posted on your profile immediately.
+## ⭐ Project Overview
 
-Completely hands-free.
+Professionals want to stay consistent on LinkedIn, but:
 
-🏗 Architecture Diagram (Text)
+- Writing summaries takes time
+- Converting articles into LinkedIn posts is difficult
+- Posting regularly requires effort
+
+This system automates the entire workflow.
+
+---
+
+## 🧠 How the System Works
+
+### Step 1 — Google Sheets Trigger
+A new article link is added to Google Sheets.
+
+This automatically triggers the n8n workflow.
+
+---
+
+### Step 2 — AI Article Summarization
+An OpenAI model generates a concise summary of the article.
+
+Example prompt:
+
+
+---
+
+### Step 3 — LinkedIn Post Generation
+The summary is rewritten into a professional LinkedIn post.
+
+Example prompt:
+
+
+---
+
+### Step 4 — Auto Publishing to LinkedIn
+The formatted post is published automatically using the LinkedIn API.
+
+No manual posting required.
+
+---
+
+## 🏗 Architecture Diagram
+
 Google Sheets (Article Link)
-        │
-        ▼
-n8n Google Sheets Trigger Node
-        │
-        ▼
-OpenAI Summarizer (LLM)
-        │
-        ▼
-LLM Chain (LinkedIn-style Formatter)
-        │
-        ▼
-LinkedIn Post Node (API)
-
-🛠 Tech Stack
-Component	Technology
-Workflow Automation	n8n
-Language Model	OpenAI GPT Models
-Input Source	Google Sheets
-Content Generation	Prompt Engineering + LLM Chain
-Publishing	LinkedIn API
-Logic	JSON mapping in n8n
-📁 Repository Structure
-📦 genai-linkedin-auto-post
- │
- ├── README.md                 # Full documentation
- ├── /screenshots              # Your 5 uploaded images
- │     ├── llm_architecture_overview.jpg
- │     ├── google_sheets_trigger_workflow.jpg
- │     ├── summarizer_prompt_output.jpg
- │     ├── llm_chain_node.jpg
- │     └── auto_post_to_linkedin.jpg
- │
- ├── workflow.json (Optional: Exported n8n workflow)
- └── prompts.md (Optional: Store your prompts)
-
-📈 Features
-
-🔗 Reads article links automatically from Google Sheets
-
-🤖 Extracts the key insights using LLM summarization
-
-✍️ Reformats the content as a LinkedIn-style post
-
-🔥 Publishes directly via LinkedIn API
-
-🌀 Fully automated workflow
-
-⚙️ Supports continuous posting
-
-🔄 Extendable for multi-platform publishing
-
-🧪 Testing the Workflow
-✔ Add the link to Google Sheets
-
-→ Workflow triggers.
-
-✔ Check Summarizer Output
-
-→ Summary appears in execution logs.
-
-✔ Check LLM Chain Output
-
-→ LinkedIn-ready post appears.
-
-✔ Final Step
-
-→ Post is automatically published to your LinkedIn account.
-
-🎯 Use Cases
-
-Daily LinkedIn learning posts
-
-Startup founders posting articles
-
-Personal branding automation
-
-Newsletter → LinkedIn autoposting
-
-AI-powered content creation for teams
-
-🌟 Why This Project Stands Out
-
-This project shows:
-
-✔ Real GenAI application — not just a model demo
-✔ Automation skills (n8n workflows)
-✔ API integration (LinkedIn)
-✔ Zero-code + AI combined effectively
-✔ End-to-end working solution with screenshots
+│
+▼
+n8n Google Sheets Trigger
+│
+▼
+OpenAI Summarizer
+│
+▼
+LLM Chain (LinkedIn Formatter)
+│
+▼
+LinkedIn API Post
 
 
-🔮 Future Enhancements
+---
 
-Add support for Twitter/X, Instagram, Threads
+## 🛠 Tech Stack
 
-Add auto-hashtag generator
+| Component | Technology |
+|----------|-----------|
+| Workflow Automation | n8n |
+| Language Model | OpenAI GPT |
+| Input Source | Google Sheets |
+| Content Generation | Prompt Engineering |
+| Publishing | LinkedIn API |
+| Data Mapping | JSON in n8n |
 
-Use embeddings to detect article themes
+---
 
-Add confidence score for AI outputs
+## 📁 Repository Structure
 
-Add Notion/Database to track posting history
+genai-linkedin-auto-post/
+│
+├── README.md
+├── workflow.json
+├── prompts.md
+│
+└── screenshots/
+├── llm_architecture_overview.jpg
+├── google_sheets_trigger_workflow.jpg
+├── summarizer_prompt_output.jpg
+├── llm_chain_node.jpg
+└── auto_post_to_linkedin.jpg
 
-📄 License
 
-This project is open for educational, portfolio, and GenAI buildathon demonstration purposes.
+---
+
+## 📈 Features
+
+- Reads article links automatically from Google Sheets
+- Generates article summaries using LLMs
+- Converts summaries into LinkedIn-style posts
+- Publishes posts automatically
+- Fully automated workflow
+- Continuous posting support
+- Extendable automation pipeline
+
+---
+
+## 🧪 Testing the Workflow
+
+1. Add a link to Google Sheets
+2. Workflow triggers automatically
+3. Check summarizer output in n8n logs
+4. Verify LinkedIn post generation
+5. Confirm automatic LinkedIn posting
+
+---
+
+## 🎯 Use Cases
+
+- Daily LinkedIn learning posts
+- Startup founder content automation
+- Personal branding automation
+- Newsletter-to-LinkedIn conversion
+- AI-powered content workflows
+
+---
+
+## 🌟 Why This Project Stands Out
+
+This project demonstrates:
+
+- Real GenAI application
+- Automation workflow design
+- API integration
+- Prompt engineering
+- End-to-end AI system implementation
+
+Not just AI usage — **AI system building**.
+
+---
+
+## 🔮 Future Enhancements
+
+- Multi-platform posting (Twitter/X, Instagram)
+- Automatic hashtag generation
+- Embedding-based article classification
+- Post history tracking database
+- Output confidence scoring
+- Notion integration
+
+---
+
+## 📄 License
+
+This project is intended for educational, portfolio, and GenAI buildathon demonstration purposes.
+
+---
+
+## Author
+Dhanuja Anbalagan
