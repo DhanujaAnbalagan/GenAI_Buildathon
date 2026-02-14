@@ -34,23 +34,6 @@ An OpenAI model generates a concise summary of the article.
 
 Example prompt:
 
-
-
-## 🧠 How the System Works
-
-### Step 1 — Google Sheets Trigger
-A new article link is added to Google Sheets.
-
-This automatically triggers the n8n workflow.
-
----
-
-### Step 2 — AI Article Summarization
-An OpenAI model generates a concise summary of the article.
-
-Example prompt:
-
-
 ---
 
 ### Step 3 — LinkedIn Post Generation
