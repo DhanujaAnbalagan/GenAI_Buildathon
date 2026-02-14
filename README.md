@@ -53,19 +53,8 @@ No manual posting required.
 
 ## 🏗 Architecture Diagram
 
-Google Sheets (Article Link)
-│
-▼
-n8n Google Sheets Trigger
-│
-▼
-OpenAI Summarizer
-│
-▼
-LLM Chain (LinkedIn Formatter)
-│
-▼
-LinkedIn API Post
+<img width="690" height="714" alt="image" src="https://github.com/user-attachments/assets/44ad110f-eb60-428b-b663-d7d398a0b6ec" />
+
 
 
 ---
@@ -85,18 +74,8 @@ LinkedIn API Post
 
 ## 📁 Repository Structure
 
-genai-linkedin-auto-post/
-│
-├── README.md
-├── workflow.json
-├── prompts.md
-│
-└── screenshots/
-├── llm_architecture_overview.jpg
-├── google_sheets_trigger_workflow.jpg
-├── summarizer_prompt_output.jpg
-├── llm_chain_node.jpg
-└── auto_post_to_linkedin.jpg
+<img width="429" height="365" alt="image" src="https://github.com/user-attachments/assets/afa55b69-94c6-4dfb-b393-e60f619eb231" />
+
 
 
 ---
