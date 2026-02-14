@@ -34,27 +34,7 @@ An OpenAI model generates a concise summary of the article.
 
 Example prompt:
 
-# 🚀 Automated LinkedIn Post Generator using GenAI + n8n
 
-This project is an AI-powered automation system that converts article links into professional LinkedIn posts automatically.
-
-By combining **n8n**, **OpenAI models**, **Google Sheets**, and the **LinkedIn API**, the workflow reads an article URL, summarizes it, rewrites it for LinkedIn, and publishes it — completely hands-free.
-
-Built for the **GenAI Buildathon**, this project demonstrates a real-world generative AI automation pipeline.
-
----
-
-## ⭐ Project Overview
-
-Professionals want to stay consistent on LinkedIn, but:
-
-- Writing summaries takes time
-- Converting articles into LinkedIn posts is difficult
-- Posting regularly requires effort
-
-This system automates the entire workflow.
-
----
 
 ## 🧠 How the System Works
 
